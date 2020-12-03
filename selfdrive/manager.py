@@ -459,7 +459,7 @@ def manager_thread():
     for k in os.getenv("BLOCK").split(","):
       del managed_processes[k]
 
-  #logger_dead = False
+  logger_dead = False
 
   start_t = time.time()
   first_proc = None
