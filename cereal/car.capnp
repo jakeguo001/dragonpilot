@@ -106,6 +106,19 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     whitePandaUnsupported @81;
     startupWhitePanda @82;
     canErrorPersistent @83;
+    belowEngageSpeed @84;
+    noGps @85;
+    focusRecoverActive @86;
+    wrongCruiseMode @87;
+    neosUpdateRequired @88;
+
+    #dp
+    preLaneChangeLeftALC @89;
+    preLaneChangeRightALC @90;
+    laneChangeALC @91;
+    manualSteeringRequired @92;
+    manualSteeringRequiredBlinkersOn @93;
+    leadCarMoving @94;
   }
 }
 
@@ -172,6 +185,9 @@ struct CarState {
   # blindspot sensors
   leftBlindspot @33 :Bool; # Is there something blocking the left lane change
   rightBlindspot @34 :Bool; # Is there something blocking the right lane change
+
+  # dp
+  lkMode @37 :Bool;
 
   struct WheelSpeeds {
     # optional wheel speeds
@@ -466,7 +482,7 @@ struct CarParams {
     hondaBoschHarness @20;
     volkswagenPq @21;
     subaruLegacy @22;  # pre-Global platform
-    volvoC1 @23;
+	volvoC1 @23;
     volvoEUCD @24;
   }
 
