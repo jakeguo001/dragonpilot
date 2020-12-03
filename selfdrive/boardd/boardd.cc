@@ -84,7 +84,8 @@ void *safety_setter_thread(void *s) {
   #ifndef DisableRelay
   // diagnostic only is the default, needed for VIN query
   pthread_mutex_lock(&usb_lock);
-  libusb_control_transfer(dev_handle, 0x40, 0xdc, (uint16_t)(cereal::CarParams::SafetyModel::ELM327), 0, NULL, 0, TIMEOUT);
+  //libusb_control_transfer(dev_handle, 0x40, 0xdc, (uint16_t)(cereal::CarParams::SafetyModel::ELM327), 0, NULL, 0, TIMEOUT);
+  libusb_control_transfer(dev_handle, 0x40, 0xdc, (uint16_t)(cereal::CarParams::SafetyModel::NO_OUTPUT), 0, NULL, 0, TIMEOUT);
   pthread_mutex_unlock(&usb_lock);
 
   char *value_vin;
