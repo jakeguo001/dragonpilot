@@ -482,7 +482,7 @@ struct CarParams {
     hondaBoschHarness @20;
     volkswagenPq @21;
     subaruLegacy @22;  # pre-Global platform
-	volvoC1 @23;
+    volvoC1 @23;
     volvoEUCD @24;
   }
 
